@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEGUE LAW</title>
+
     <!-- fav icon -->
     <link rel="shortcut icon" href="./images/fav-icon.png" type="image/x-icon">
     <!-- CDN -->
@@ -34,6 +35,23 @@
         }
     </script>
 
+<!-- slider switching -->
+<script>
+    // JavaScript/jQuery for sliding between carousel items
+    document.addEventListener('DOMContentLoaded', function () {
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        carouselItems[0].classList.add('block');
+        carouselItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                item.classList.remove('block');
+                item.classList.add('hidden');
+                carouselItems[(index + 1) % carouselItems.length].classList.add('block');
+                carouselItems[(index + 1) % carouselItems.length].classList.remove('hidden');
+            });
+        });
+    });
+</script>
+
     <!-- font style -->
     <style>
         .font-para {
@@ -53,10 +71,10 @@
 
         <!-- Navbar -->
         <nav class="font-para mb-1">
-            <div class="navbar ">
+            <div class="navbar  ">
                 <div class="navbar-start">
                     <div class="dropdown">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <label tabindex="0" class="btn btn-ghost text-white bg-black lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -91,16 +109,16 @@
 
         <!-- banner -->
         <section class="mt-16">
-            <div class="hero min-h-screen"  style="background-image: url('./images/banner.png');">
+            <div class="hero min-h-screen" style="background-image: url('./images/banner.png');">
                 <div class="hero-overlay bg-opacity-60"></div>
-                <div class="hero-content text-center text-neutral-content">
+                <div class=" text-center text-neutral-content">
                     <div class="max-w-3xl">
                         <h1 class="mb-6 font-head text-7xl font-bold">We Provide Effective Legal Solutions</h1>
                         <p class="mb-6 font-para">There are many variations of passages of Lorem Ipsum available, but
                             the majority have suffered alteration in some form, by injected humour.</p>
                         <div class="flex flex-col gap-3 md:flex-row justify-between h-16">
                             <div>
-                                <input type="text" placeholder="Search your services" class="h-16 w-96 rounded-xl">
+                                <input type="text" placeholder="Search your services" class="h-16  rounded-xl">
                             </div>
                             <div>
                                 <button class="btn bg-bg-btn h-16 w-36 border-none">Search</button>
@@ -215,6 +233,92 @@
 
         </section>
 
+       <!-- Slider carousel -->
+<div class="carousel w-full lg:h-[550px] bg-bike-primary-bg">
+    <!-- slide 1 -->
+    <div id="slide1" class="carousel-item relative w-full">
+        <img src="./images/slider-1.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle btn-ghost text-white bg-black">❮</a>
+            <a href="#slide2" class="btn btn-circle btn-ghost text-white bg-black">❯</a>
+        </div>
+        <!-- Add information on the slider -->
+        <div class="absolute flex justify-center items-center text-center top-48 text-white">
+            <div class="w-4/6 ">
+                <img class="mx-auto" src="./images/client.png" alt="">
+                <h3 class="text-lg font-semibold mt-8">Awlad Hossain</h3>
+                <p>UIX Designer</p>
+                <p class="mt-8">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                    Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- slide 2 -->
+    <div id="slide2" class="carousel-item relative w-full">
+        <img src="./images/slider-2.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle btn-ghost text-white bg-black">❮</a>
+            <a href="#slide3" class="btn btn-circle btn-ghost text-white bg-black">❯</a>
+        </div>
+        <!-- Add information on the slider -->
+        <div class="absolute flex justify-center items-center text-center top-48 text-white">
+            <div class="w-4/6 ">
+                <img class="mx-auto" src="./images/client.png" alt="">
+                <h3 class="text-lg font-semibold mt-8">Awlad Hossain</h3>
+                <p>UIX Designer</p>
+                <p class="mt-8">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                    Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- slide 3 -->
+    <div id="slide3" class="carousel-item relative w-full">
+        <img src="./images/slider-3.jpg" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle btn-ghost text-white bg-black">❮</a>
+            <a href="#slide4" class="btn btn-circle btn-ghost text-white bg-black">❯</a>
+        </div>
+        <!-- Add information on the slider -->
+        <div class="absolute flex justify-center items-center text-center top-48 text-white">
+            <div class="w-4/6 ">
+                <img class="mx-auto" src="./images/client.png" alt="">
+                <h3 class="text-lg font-semibold mt-8">Awlad Hossain</h3>
+                <p>UIX Designer</p>
+                <p class="mt-8">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                    Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- slide 4 -->
+    <div id="slide4" class="carousel-item relative w-full">
+        <img src="./images/banner.png" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle btn-ghost text-white bg-black">❮</a>
+            <a href="#slide1" class="btn btn-circle btn-ghost text-white bg-black">❯</a>
+        </div>
+        <!-- Add information on the slider -->
+        <div class="absolute flex justify-center items-center text-center top-48 text-white">
+            <div class="w-4/6 ">
+                <img class="mx-auto" src="./images/client.png" alt="">
+                <h3 class="text-lg font-semibold mt-8">Awlad Hossain</h3>
+                <p>UIX Designer</p>
+                <p class="mt-8">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                    Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
     </main>
 
